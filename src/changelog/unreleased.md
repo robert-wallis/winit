@@ -16,6 +16,8 @@ on how to add them:
 - On X11, add `Window::even_more_rare_api`.
 - On Wayland, add `Window::common_api`.
 - On Windows, add `Window::some_rare_api`.
+- On macOS, use the objc2 feature `relax-sign-encoding` to fix a runtime crash #4299
+  in macOS 26 with objc type checking.
 ```
 
 When the change requires non-trivial amount of work for users to comply
@@ -32,7 +34,6 @@ with it, the migration guide should be added below the entry, like:
   To migrate it we should do X, Y, and then Z, for example:
 
   // Code snippet.
-
 ```
 
 The migration guide could reference other migration examples in the current
